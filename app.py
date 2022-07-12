@@ -40,7 +40,7 @@ def handle_message(event):
     msg = event.message.text
     r = '你去吃屎'
 
-    if msg in ['想', '貼圖', '愛', '睡', '安', '上班']:
+    if msg in ['想', '貼圖', '我愛你', '睡覺', '安', '安安', '晚安', '午安', '早安', '上班']:
         sticker_message = StickerSendMessage(
             package_id= '1',
             sticker_id= '1'
@@ -52,10 +52,12 @@ def handle_message(event):
 
     if msg in ['hi', 'Hi', '嗨', '有空']:
         r = '幹嘛，我很忙，你最好不要說廢話'
-    elif msg in ['天氣', '吃', '睡', '訂位']:
+    elif msg in ['天氣', '吃飯', '不想上班', '訂位']:
         r = '關我屁事'
     elif msg in ['你是誰', '兇', '凶']:
         r = '關你屁事，爽拉'
+    elif msg == '吃了嗎':
+        r = '胖死了還吃'
 
     line_bot_api.reply_message(
         event.reply_token,
