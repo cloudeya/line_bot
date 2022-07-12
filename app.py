@@ -40,15 +40,15 @@ def handle_message(event):
     msg = event.message.text
     r = '你去吃屎'
 
-    #if ['貼圖', '想'] in msg:
-        #sticker_message = StickerSendMessage(
+    if ['貼圖', '想'] in msg:
+        sticker_message = StickerSendMessage(
             package_id='1',
             sticker_id='1'
-        #)
-        #line_bot_api.reply_message(
+        )
+        line_bot_api.reply_message(
         event.reply_token,
-        #sticker_message)
-        #return
+        sticker_message)
+        return
 
     if msg in ['hi', 'Hi', '嗨', '有空']:
         r = '幹嘛，我很忙，你最好不要說廢話'
