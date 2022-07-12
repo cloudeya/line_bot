@@ -40,7 +40,7 @@ def handle_message(event):
     msg = event.message.text
     r = '你去吃屎'
 
-    if msg in ['想', '貼圖']:
+    if msg in ['想', '貼圖', '愛', '睡', '安', '上班']:
         sticker_message = StickerSendMessage(
             package_id= '1',
             sticker_id= '1'
