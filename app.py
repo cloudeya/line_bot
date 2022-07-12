@@ -40,10 +40,10 @@ def handle_message(event):
     msg = event.message.text
     r = '你去吃屎'
 
-    if ['貼圖', '想'] in msg:
+    if msg in ['想', '貼圖']:
         sticker_message = StickerSendMessage(
-            package_id='1',
-            sticker_id='1'
+            package_id= '1',
+            sticker_id= '1'
         )
         line_bot_api.reply_message(
         event.reply_token,
@@ -55,7 +55,8 @@ def handle_message(event):
     elif msg in ['天氣', '吃', '睡', '訂位']:
         r = '關我屁事'
     elif msg in ['你是誰', '兇', '凶']:
-        r = '關你屁事，爽'
+        r = '關你屁事，爽拉'
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
